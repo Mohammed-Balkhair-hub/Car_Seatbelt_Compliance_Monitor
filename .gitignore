@@ -12,3 +12,5 @@ uv.lock
 # Dataset
 dataset/
 README.md
+# macOS
+.DS_Store
