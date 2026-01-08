@@ -57,7 +57,13 @@ Car_Seatbelt_Compliance_Monitor/
 ### 3. Seatbelt Detection Model
 - **Model**: Custom-trained YOLO11n (`seat_belt_fast/10_epoch_m3/weights/best.pt`)
 - **Purpose**: Detect seatbelt usage (person-seatbelt, person-noseatbelt, seatbelt)
-- **Training**: Custom fine-tuned on Roboflow seatbelt detection dataset
+- **Training**: Custom fine-tuned on seatbelt detection dataset from [Roboflow Universe](https://universe.roboflow.com/farishijazi/seat_belt_detection-78bmx)
+- **Dataset Source**: 
+  - You can download the same dataset used for training from [Roboflow Universe - Seat Belt Detection](https://universe.roboflow.com/farishijazi/seat_belt_detection-78bmx) (3,820 images, version 2)
+  - Alternatively, search for "seatbelt detection" on [Roboflow Universe](https://universe.roboflow.com/) to find other available datasets
+- **Alternative Options**: 
+  - Train your own model using datasets from Roboflow Universe and specify the path with `--seatbelt-model`
+  - Use a pre-trained YOLO seatbelt detection model (search on Hugging Face, Roboflow Universe, or other model repositories) and specify its path with `--seatbelt-model`
 - **Classes**: 
   - Class 9: person-noseatbelt
   - Class 10: person-seatbelt
@@ -126,7 +132,9 @@ Ensure you have the following model files:
 
 1. **YOLO11n** (`yolo11n.pt`) - Automatically downloaded on first use
 2. **License Plate Model** - Download from [Hugging Face](https://huggingface.co/morsetechlab/yolov11-license-plate-detection) and save to your desired location. Update the `--plate-model` path accordingly.
-3. **Seatbelt Model** - Place your trained seatbelt detection model in your desired location. Update the `--seatbelt-model` path to point to your model file (e.g., `path/to/your/seatbelt/model.pt`).
+3. **Seatbelt Model** - You have two options:
+   - **Train your own model**: Download the seatbelt detection dataset from [Roboflow Universe - Seat Belt Detection](https://universe.roboflow.com/farishijazi/seat_belt_detection-78bmx) (or search for other seatbelt datasets), train a YOLO model, and specify the path with `--seatbelt-model`
+   - **Use a pre-trained model**: Search for pre-trained YOLO seatbelt detection models online (e.g., on Hugging Face, Roboflow Universe, or other model repositories) and specify the path with `--seatbelt-model`
 
 ## Usage
 
