@@ -14,7 +14,10 @@ A comprehensive computer vision pipeline for detecting vehicles, analyzing seatb
 ## Project Structure
 
 ```
-seatbelt_compliance_monitor/
+Car_Seatbelt_Compliance_Monitor/
+├── Assets/                   # Example images for documentation
+│   ├── seatbelt.jpg          # Example: Seatbelt detected
+│   └── no-seatbelt.jpg       # Example: No seatbelt detected
 ├── src/
 │   ├── car_detection/        # Car detection module
 │   ├── seatbelt_detection/   # Seatbelt detection module
@@ -65,6 +68,22 @@ seatbelt_compliance_monitor/
 - **Purpose**: Extract text from detected license plates
 - **Language**: English
 
+## Detection Examples
+
+The pipeline can accurately detect seatbelt compliance status. Below are example outputs:
+
+### Seatbelt Detected ✅
+
+![Seatbelt Detected](Assets/seatbelt.jpg)
+
+*Example showing successful seatbelt detection with bounding boxes highlighting the detected seatbelt.*
+
+### No Seatbelt Detected ❌
+
+![No Seatbelt Detected](Assets/no-seatbelt.jpg)
+
+*Example showing detection of a person without a seatbelt, which would be flagged as a violator if license plate is identifiable.*
+
 ## Prerequisites
 
 - Python >= 3.12
@@ -87,7 +106,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ```bash
 git clone <repository-url>
-cd seatbelt_compliance_monitor
+cd Car_Seatbelt_Compliance_Monitor
 ```
 
 ### 3. Install dependencies
