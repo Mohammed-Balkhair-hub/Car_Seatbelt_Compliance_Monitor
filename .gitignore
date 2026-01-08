@@ -9,9 +9,7 @@ wheels/
 # Virtual environments
 .venv
 uv.lock
-# Dataset
 dataset/
-README.md
 # macOS
 .DS_Store
 # Model files (too large for GitHub)
@@ -20,3 +18,14 @@ README.md
 *.onnx
 *.h5
 *.pb
+cars_Annotated/
+cars_cropes/
+plates_Annotated/
+plates_cropes/
+dataset/
+seat_belt_detection/
+seat_belt_fast/
+.ipynb_checkpoints/
+output/
+car_detection.ipynb
+yolo_seatbelt_finetune.ipynb
