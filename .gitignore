@@ -14,3 +14,9 @@ dataset/
 README.md
 # macOS
 .DS_Store
+# Model files (too large for GitHub)
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pb
